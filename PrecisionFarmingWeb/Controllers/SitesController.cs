@@ -18,10 +18,10 @@ namespace PrecisionFarmingWeb.Controllers
             try
 
             {
-                using (var context = new DatabaseContext())
+                using (var dbContext = new DatabaseContext())
                 {
 
-                    var sitesData = (from site in context.SITES
+                    var sitesData = (from site in dbContext.SITES
                                      select new
                                      {
                                          site.SITE_ID,

@@ -19,12 +19,11 @@ namespace PrecisionFarmingWeb.Controllers
         {
             try
             {
-                using (var context = new DatabaseContext())
+                using (var dbContext = new DatabaseContext())
                 {
 
-                    var userEntity = (from user in context.USERS
+                    var userEntity = (from user in dbContext.USERS
                                       where ClientUser.USER_EMAIL.ToLower().Trim() == user.USER_EMAIL.ToLower().Trim()
-
                                       select new
                                       {
                                           user.USER_EMAIL,
@@ -63,15 +62,15 @@ namespace PrecisionFarmingWeb.Controllers
         public ActionResult CreateUser([FromBody]Users ClientUser) {
             try
             {
-                using (var context = new DatabaseContext())
+                using (var dbContext = new DatabaseContext())
                 {
 
-                    var userEntity = context.USERS.FirstOrDefault(U => U.USER_EMAIL == ClientUser.USER_EMAIL);
+                    var userEntity = dbContext.USERS.FirstOrDefault(U => U.USER_EMAIL == ClientUser.USER_EMAIL);
                     if (userEntity == null)
                     {
                         ClientUser.USER_PASSWORD = Encryptword(ClientUser.USER_PASSWORD);
-                        context.USERS.Add(ClientUser);
-                        context.SaveChanges();
+                        dbContext.USERS.Add(ClientUser);
+                        dbContext.SaveChanges();
                         return Created(ClientUser.USER_EMAIL, "User Created");
                     }
                     else {
