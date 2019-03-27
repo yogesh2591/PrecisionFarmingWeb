@@ -10,8 +10,8 @@ namespace PrecisionFarmingWeb.Controllers
 {
     public class SensorsDataController : Controller
     {
-        [Route("api/Sites")]
-        [HttpGet]
+        //[Route("api/Sites")]
+        //[HttpGet]
         //public IActionResult GetSitesSensorsData([FromRoute] string SITE_ID)
         //{
         //    try
