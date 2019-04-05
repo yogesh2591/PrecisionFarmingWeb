@@ -13,7 +13,7 @@ namespace PrecisionFarmingWeb.Models
         public string SENSOR_ID { get; set; }
         public double TEMP_CELSIUS { get; set; }
         public int SIGNAL_STRENGTH { get; set; }
-        public string PUBLISH_AT { get; set; }
+        public DateTime PUBLISH_AT { get; set; }
         public double TEMP_FAR { get; set; }
         public double HUMIDITY { get; set; }
     }

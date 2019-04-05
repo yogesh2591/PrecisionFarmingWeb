@@ -12,7 +12,6 @@ namespace PrecisionFarmingWeb.Controllers
     [Route("api/Sites")]
     public class SItesController : Controller
     {
-        
         public ActionResult GetAction()
         {
             try
@@ -47,9 +46,6 @@ namespace PrecisionFarmingWeb.Controllers
             }
 
         }
-
-
-
     }
 
 

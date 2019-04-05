@@ -14,6 +14,6 @@ namespace PrecisionFarmingWeb.Models
         public double LATITUDE { get; set; }
         public double LONGITUDE { get; set; }
         public int SIGNAL_STRENGTH { get; set; }
-        public string PUBLISH_AT { get; set; }
+        public DateTime PUBLISH_AT { get; set; }
     }
 }

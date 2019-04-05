@@ -9,10 +9,10 @@ namespace PrecisionFarmingWeb.Models
     public class PhSensorData
     {
         [Key]
-        public int GID { get; set; }
+        public int ID { get; set; }
         public string SENSOR_ID { get; set; }
-        public double SENSOR_STATUS { get; set; }
-        public int CURRENT_READING_SEQ_NO { get; set; }
-        public string SITE_ID { get; set; }
+        public double PH_LEVEL { get; set; }
+        public int SIGNAL_STRENGTH { get; set; }
+        public DateTime PUBLISH_AT { get; set; }
     }
 }
